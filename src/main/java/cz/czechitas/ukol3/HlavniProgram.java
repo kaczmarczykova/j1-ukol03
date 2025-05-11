@@ -35,6 +35,17 @@ public class HlavniProgram {
         mujPocitac.vypniSe();
 
         mujPocitac.vypniSe();      // Nevypíše chybu, ale nic neprovede, protože počítač už je vypnutý
+
+
+        mujPocitac.zapniSe();
+        mujPocitac.vytvorSouborOVelikosti(4_000_000_000L);
+        mujPocitac.vytvorSouborOVelikosti(16_000_000_000L);
+        mujPocitac.vytvorSouborOVelikosti(8_000_000_000L);
+
+        mujPocitac.vymazSouboryOVelikosti(16_000_000_000L);
+        mujPocitac.vymazSouboryOVelikosti(4_000_000_000L);
+        mujPocitac.vymazSouboryOVelikosti(8_000_000_000L);
+        mujPocitac.vypniSe();
     }
 
 }

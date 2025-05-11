@@ -58,4 +58,20 @@ public class Pocitac {
         }
         return jeZapnuty;
     }
+
+    public void vytvorSouborOVelikosti(long velikost) {
+        if (!jeZapnuty) {
+            System.err.println("Počítač je vypnutý, akci nelze provést.");
+            return;
+        }
+        mujDisk.vytvorSoubor(velikost);
+    }
+
+    public void vymazSouboryOVelikosti(long velikost) {
+        if (!jeZapnuty) {
+            System.err.println("Počítač je vypnutý, akci nelze provést.");
+            return;
+        }
+        mujDisk.vymazSoubor(velikost);
+    }
 }
