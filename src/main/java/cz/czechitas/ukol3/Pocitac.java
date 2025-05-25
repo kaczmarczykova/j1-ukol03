@@ -7,8 +7,10 @@ public class Pocitac {
     private Disk mujDisk;
     private Pamet mojePamet;
 
-    public String toString() {
-        return mujProcesor.toString() + "\n" + mujDisk.toString() + "\n" + mojePamet.toString();
+   public String toString() {
+       if (mujProcesor == null || mujDisk == null || mojePamet == null)
+            return "Pocitac neni kompletni";
+       return mujProcesor.toString() + "\n" + mujDisk.toString() + "\n" + mojePamet.toString();
     }
 
     /*public long getCpu() {
@@ -28,7 +30,7 @@ public class Pocitac {
     }
 
     public boolean jeZapnuty(){
-        if (jeZapnuty == true) {
+        if (jeZapnuty) {
             System.out.println("Počítač je zapnutý.");
         } else {
             System.out.println("Počítač je vypnutý.");
@@ -41,7 +43,7 @@ public class Pocitac {
             System.err.println("Počítač nelze zapnout.");
             jeZapnuty = false;
         } else {
-            if (jeZapnuty == false) {
+            if (!jeZapnuty) {
                 System.out.println("Počítač se zapnul.");
                 jeZapnuty = true;
             } else {
@@ -53,7 +55,7 @@ public class Pocitac {
     }
 
     public boolean vypniSe() {
-        if (jeZapnuty == true) {
+        if (jeZapnuty) {
             jeZapnuty = false;
         }
         return jeZapnuty;

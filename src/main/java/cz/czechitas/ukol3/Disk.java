@@ -26,7 +26,7 @@ public class Disk {
     }
 
     public void vytvorSoubor(long velikostSouboru) {
-        if (vyuziteMisto + velikostSouboru > kapacitaDisku)
+        if (vyuziteMisto + velikostSouboru <= kapacitaDisku)
             vyuziteMisto += velikostSouboru;
         else
             System.err.println("Počítač nemá dostatek volného místa na disku.");
